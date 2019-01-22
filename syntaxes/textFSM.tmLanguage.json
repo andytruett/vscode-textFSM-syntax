@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "textFSM Templates",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "comment": "",
+          "name": "",
+          "match": ""
+        },
+        {
+          "comment": "",
+          "name": "",
+          "match": ""
+        }
+      ]
+    },
+    "strings": {
+      "name": "",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "",
+          "match": ""
+        }
+      ]
+    }
+  },
+  "scopeName": "text.textFSM"
+}

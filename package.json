@@ -1,0 +1,29 @@
+{
+	"name": "TextFSM-Syntax",
+	"displayName": "vscode-textfsm-syntax",
+	"description": "Syntax highlighting for TextFSM templates",
+  "version": "0.0.1",
+  "publisher": "AndyTruett",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andytruett/vscode-textFSM-syntax.git"
+  },
+	"engines": {
+		"vscode": "^1.30.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+    "languages": [{
+      "id": "textFSM",
+      "extensions": [".template"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "textFSM",
+      "scopeName": "text.textFSM",
+      "path": "./syntaxes/textFSM.tmlaguage.json"
+    }]
+  }
+}
