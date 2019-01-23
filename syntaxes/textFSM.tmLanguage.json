@@ -4,34 +4,40 @@
   "patterns": [
     {
       "include": "#keywords"
-    },
-    {
-      "include": "#strings"
     }
   ],
   "repository": {
     "keywords": {
       "patterns": [
         {
-          "comment": "",
-          "name": "",
-          "match": ""
+          "comment": "Comment",
+          "name": "comment.line.number-sign.textFSM",
+          "match": "^\\s*#.*$"
         },
         {
-          "comment": "",
-          "name": "",
-          "match": ""
-        }
-      ]
-    },
-    "strings": {
-      "name": "",
-      "begin": "\"",
-      "end": "\"",
-      "patterns": [
+          "comment": "Value Keyword",
+          "name": "constant.textFSM",
+          "match": "^Value"
+        },
         {
-          "name": "",
-          "match": ""
+          "comment": "Value Option",
+          "name": "entity.name.selector.textFSM",
+          "match": "((?>Filldown|Key|Required|List|Fillup),?)+"
+        },
+        {
+          "comment": "Value RegEx",
+          "name": "variable.textFSM",
+          "match": "\\(.*?\\)$"
+        },
+        {
+          "comment": "State",
+          "name": "entity.other.attribute-name.textFSM",
+          "match": "^(?!Value)\\w+$"
+        },
+        {
+          "comment": "State Rule",
+          "name": "string.regexp.textFSM",
+          "match": "^\\s+\\^.*$"
         }
       ]
     }
