@@ -1,8 +1,9 @@
 {
 	"name": "TextFSM-Syntax",
 	"displayName": "vscode-textfsm-syntax",
-	"description": "Syntax highlighting for TextFSM templates",
-  "version": "0.0.1",
+  "description": "Syntax highlighting for TextFSM templates",
+  "icon": "icon.png",
+  "version": "1.0.1",
   "publisher": "AndyTruett",
   "repository": {
     "type": "git",

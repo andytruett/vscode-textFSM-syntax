@@ -1,5 +1,8 @@
+# Example from textFSM documentation
+# https://github.com/google/textfsm/wiki/TextFSM
+
 # Chassis value will be null for single chassis routers.
-Value Filldown,Key Chassis (.cc.?-re.)
+Value Filldown Chassis (.cc.?-re.)
 Value Required Slot (\d+)
 Value State (\w+)
 Value Temp (\d+)
@@ -12,32 +15,6 @@ Start
   ^${Chassis}
   # Record current values and change state.
   # No record will be output on first pass as 'Slot' is 'Required' but empty.
-  # The dot '.' separator is only required if both line and record actions are specified. If one or both are left as the implicit default then the dot is omitted i.e. Next, Next.NoRecord and NoRecord are equivalent.
-
-  # The action can be optionally followed by white spaces and a new State. The State must be one of the reserved states or a valid state defined in the template. Upon matching, after any actions are performed normally, the next line is read from input and the current state is then changed to the new state and processing continues in this new state.
-
-  # Note that the Continue action does not accept a state transition. This ensures that state machines are loop free.
-  # Error Action
-
-  # There is a special action 'Error'. This action will terminate all processing and will not return the table, discarding all rows collected so far, and raises an exception.
-
-  # The syntax for this action is:
-
-  # ^regex -> Error [word|"string"]
-
-
-  ^Routing Engine status: -> Record RESlot
-  ^Routing Engine status: -> Record
-  ^Routing Engine status: -> Continue
-  ^Routing Engine status: -> Continue.NoRecord
-  ^Routing Engine status: -> Continue.Record
-  ^Routing Engine status: -> Continue.Clear
-  ^Routing Engine status: -> Continue.Clearall
-  ^Routing Engine status: -> Next.NoRecord
-  ^Routing Engine status: -> Next.Record
-  ^Routing Engine status: -> Next.Clear
-  ^Routing Engine status: -> Next.Clearall
-  ^Routing Engine status: -> Record RESlot
   ^Routing Engine status: -> Record RESlot
 
 # A state transition was not strictly necessary but helpful for the example.

@@ -1,43 +1,55 @@
 {
-  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "textFSM Templates",
-  "patterns": [
-    {
-      "include": "#keywords"
-    }
-  ],
+  "patterns": [{
+    "include": "#keywords"
+  }],
   "repository": {
     "keywords": {
-      "patterns": [
-        {
+      "patterns": [{
           "comment": "Comment",
           "name": "comment.line.number-sign.textFSM",
           "match": "^\\s*#.*$"
         },
         {
-          "comment": "Value Keyword",
+          "comment": "Value-Keyword",
           "name": "constant.textFSM",
           "match": "^Value"
         },
         {
-          "comment": "Value Option",
+          "comment": "Value-Option",
           "name": "entity.name.selector.textFSM",
           "match": "((?>Filldown|Key|Required|List|Fillup),?)+"
         },
         {
-          "comment": "Value RegEx",
+          "comment": "Value-RegEx",
           "name": "variable.textFSM",
           "match": "\\(.*?\\)$"
         },
         {
-          "comment": "State",
+          "comment": "Reserved-State",
           "name": "entity.other.attribute-name.textFSM",
-          "match": "^(?!Value)\\w+$"
+          "match": "\\b(Start|EOF)\\b"
+        },
+
+        {
+          "comment": "State-Rule",
+          "name": "string.regexp.textFSM",
+          "match": "^\\s*(\\^.+?)(?=->|$)"
         },
         {
-          "comment": "State Rule",
-          "name": "string.regexp.textFSM",
-          "match": "^\\s+\\^.*$"
+          "comment": "State-Rule-Action-Error",
+          "name": "invalid.textFSM",
+          "match": "->\\sError"
+        },
+        {
+          "comment": "State-Rule-Transition",
+          "name": "entity.other.attribute-name.textFSM",
+          "match": "((?:Next|Record|NoRecord|Clear|ClearAll)\\s+)\\w+"
+        },
+        {
+          "comment": "State-Rule-Action",
+          "name": "keyword.operator.textFSM",
+          "match": "->\\s+(Next|Continue)?\\.?(NoRecord|Record|Clearall|Clear)?"
         }
       ]
     }
