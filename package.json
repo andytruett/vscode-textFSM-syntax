@@ -18,7 +18,7 @@
 	"contributes": {
     "languages": [{
       "id": "textFSM",
-      "extensions": [".template"],
+      "extensions": [".template", ".textfsm"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
