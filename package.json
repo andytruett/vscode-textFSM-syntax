@@ -3,7 +3,7 @@
 	"displayName": "TextFSM Template Syntax",
   "description": "Syntax highlighting for TextFSM templates",
   "icon": "icon.png",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "AndyTruett",
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
 	"contributes": {
     "languages": [{
       "id": "textFSM",
-      "extensions": [".template", ".textfsm"],
+      "extensions": [".template", ".textfsm", ".fsm"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
