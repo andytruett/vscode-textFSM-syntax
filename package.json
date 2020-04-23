@@ -24,7 +24,7 @@
     "grammars": [{
       "language": "textFSM",
       "scopeName": "text.textFSM",
-      "path": "./syntaxes/textFSM.tmlanguage.json"
+      "path": "./syntaxes/textFSM.tmLanguage.json"
     }]
   }
 }
